@@ -1,4 +1,5 @@
 import pandas as pd
+from pandas._config import display
 
 # ==============================================================================
 # Pre-defined Datasets for the Tasks
@@ -52,9 +53,11 @@ STUDENTS_DF = pd.DataFrame({
 # Sub-task Functions (Check readme.md for full details)
 # ==============================================================================
 
+from IPython.display import display
+
 def filter_rows_above_threshold(df: pd.DataFrame, column: str, threshold: float) -> pd.DataFrame:
     """Sub-task 1: Filter rows where the specified column is strictly greater than threshold."""
-    pass
+    return df[df[column] > threshold]
 
 def fill_missing_values(df: pd.DataFrame, fill_value: float) -> pd.DataFrame:
     """Sub-task 2: Replace all missing values (NaN/None) with fill_value."""
